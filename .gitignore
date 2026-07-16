@@ -1,0 +1,38 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Java
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+
+# Maven y Gradle
+.gradle/
+
+# Logs y temporales
+logs/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Variables y secretos
+.env
+.env.*
+application-local.properties
+application-local.yml
+
+# Certificados y claves
+*.key
+*.pem
+*.p12
+*.jks
+
+# Sistema
+.DS_Store
+Thumbs.db
