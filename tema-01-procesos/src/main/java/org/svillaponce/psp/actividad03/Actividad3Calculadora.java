@@ -18,6 +18,7 @@ public class Actividad3Calculadora {
             case "CUADRADO" -> resultado = numero * numero;
             case "CUBO" -> resultado = numero * numero * numero;
             case "DOBLE" -> resultado = numero * 2;
+            case "TRIPLE" -> resultado = numero * 3;
 
             default -> {
                 System.err.println("ERROR: Operación no válida.");
