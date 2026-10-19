@@ -13,6 +13,7 @@ public class Actividad4ProcesadorPedido {
 
             double total = cantidad * precio;
             System.out.printf(
+                    java.util.Locale.ROOT,
                     "OK|%s|%d|%.2f|%.2f%n",
                     producto,
                     cantidad,
@@ -22,7 +23,7 @@ public class Actividad4ProcesadorPedido {
 
             System.exit(0);
         } catch (Actividad4ProcesamientoException e) {
-            System.err.println("ERROR: " + e.getTipo() + " | " + e.getMessage());
+            System.err.println("ERROR|" + e.getTipo() + "|" + e.getMessage());
 
             System.exit(codigoSalida(e.getTipo()));
         }
@@ -38,7 +39,7 @@ public class Actividad4ProcesadorPedido {
         try {
             int cantidad = Integer.parseInt(args[1]);
             if (cantidad <= 0) {
-                throw new Actividad4ProcesamientoException(Actividad4TipoError.FORMATO, "La cantidad debe ser un numero entero mayor que 0");
+                throw new Actividad4ProcesamientoException(Actividad4TipoError.CANTIDAD, "La cantidad debe ser un numero entero mayor que 0");
             }
         } catch (NumberFormatException e) {
             throw new Actividad4ProcesamientoException(Actividad4TipoError.CANTIDAD, "La cantidad debe ser un numero entero mayor que 0");
@@ -46,8 +47,8 @@ public class Actividad4ProcesadorPedido {
 
         try {
             double precio = Double.parseDouble(args[2]);
-            if (precio <= 0) {
-                throw new Actividad4ProcesamientoException(Actividad4TipoError.FORMATO, "El precio debe ser un numero decimal mayor que 0");
+            if (!Double.isFinite(precio) || precio <= 0) {
+                throw new Actividad4ProcesamientoException(Actividad4TipoError.PRECIO, "El precio debe ser un numero decimal mayor que 0");
             }
         } catch (NumberFormatException e) {
             throw new Actividad4ProcesamientoException(Actividad4TipoError.PRECIO, "El precio debe ser un numero entero mayor que 0");
@@ -57,10 +58,11 @@ public class Actividad4ProcesadorPedido {
     private static void validarPedido(String producto, int cantidad, double precio)
             throws Actividad4ProcesamientoException {
 
-        if (!producto.matches("P\\d{3}")) {
+        // Catálogo de ejemplo: tener el formato correcto no implica existir.
+        if (!java.util.Set.of("P101", "P102", "P103").contains(producto)) {
             throw new Actividad4ProcesamientoException(
                     Actividad4TipoError.PRODUCTO,
-                    "El producto debe tener formato P seguido de tres cifras"
+                    "El producto no existe en el catálogo (P101, P102, P103)"
             );
         }
     }

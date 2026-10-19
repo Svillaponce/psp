@@ -1,0 +1,4 @@
+Laura Pérez;laura@centro.es;24
+Mario López;mario@gmail.com;20
+Ana Ruiz;ana@alumno.es;abc
+FIN

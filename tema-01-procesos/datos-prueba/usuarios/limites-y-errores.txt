@@ -1,0 +1,8 @@
+Ana;a@centro.es;16
+Luis;l@educacion.es;100
+;a@centro.es;20
+Ana;sin-arroba;20
+Ana;a@centro.es;15
+Ana;a@centro.es;101
+incompleto
+FIN

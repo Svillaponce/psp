@@ -1,36 +1,17 @@
 package org.svillaponce.psp.actividad06;
 
 public class Actividad6TareaLenta {
-
-    static void main(String[] args)
-            throws InterruptedException {
-
-        if (args.length != 1) {
-            System.err.println(
-                    "ERROR: Debe indicarse la duración de la tarea."
-            );
-            System.exit(1);
-        }
-
-        int segundos;
-
+    public static void main(String[] args) throws InterruptedException {
+        if (args.length != 2) { System.err.println("Uso: <nombre> <segundos>"); System.exit(1); }
+        long segundos;
         try {
-            segundos = Integer.parseInt(args[0]);
+            segundos = Long.parseLong(args[1]);
+            if (segundos < 0 || segundos > Long.MAX_VALUE / 1000) throw new NumberFormatException();
         } catch (NumberFormatException e) {
-            System.err.println(
-                    "ERROR: La duración debe ser un número entero."
-            );
-            System.exit(2);
-            return;
+            System.err.println("Duración no válida"); System.exit(2); return;
         }
-
-        System.out.println(
-                "Tarea iniciada. Duración: "
-                        + segundos + " segundos."
-        );
-
-        Thread.sleep(segundos * 1000L);
-
-        System.out.println("Tarea terminada correctamente.");
+        System.out.println("Iniciando " + args[0]);
+        Thread.sleep(segundos * 1000);
+        System.out.println(args[0] + " completada");
     }
 }

@@ -1,8 +1,8 @@
 package org.svillaponce.psp.actividad05;
 
+import java.nio.file.Path;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Path;
 import java.util.logging.Logger;
 
 import static java.lang.IO.readln;
@@ -15,21 +15,11 @@ public class Actividad5ClienteTexto {
     static void main()
             throws IOException, InterruptedException {
 
-        Path javaPath = Path.of(
-                System.getProperty("java.home"),
-                "bin",
-                "java"
-        );
-
-        String classpath =
-                "tema-01-procesos/target/classes";
-
+        Path ejecutableJava = Path.of(System.getProperty("java.home"), "bin", "java");
         ProcessBuilder pb = new ProcessBuilder(
-                javaPath.toString(),
-                "-cp",
-                classpath,
-                "org.svillaponce.psp.actividad05.Actividad5AnalizadorTexto"
-        );
+                ejecutableJava.toString(), "-cp", System.getProperty("java.class.path"),
+                "org.svillaponce.psp.actividad05.Actividad5AnalizadorTexto");
+        pb.redirectError(ProcessBuilder.Redirect.INHERIT);
 
         Process proceso = pb.start();
 
@@ -39,6 +29,9 @@ public class Actividad5ClienteTexto {
 
         String texto = readln("Introduce un texto: ");
 
+        if (texto == null) { proceso.destroy(); return; }
+
+        // OutputStream del padre conecta con stdin del hijo. El salto y flush desbloquean readLine().
         try (BufferedWriter writer =
                      new BufferedWriter(
                              new OutputStreamWriter(

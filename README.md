@@ -22,14 +22,9 @@ Repositorio principal del módulo de Programación de Servicios y Procesos.
 
 ## Estructura
 
-- `temas/`: contenidos teóricos.
-- `actividades/`: ejercicios breves y prácticas.
-- `proyectos/`: proyectos amplios y evaluables.
-- `examenes/`: pruebas y material inicial.
-- `rubricas/`: instrumentos de evaluación.
-- `codigo/`: ejemplos, demostraciones y soluciones.
-- `recursos/`: diagramas y archivos auxiliares.
-- `docs/`: documentación docente y programación didáctica.
+- `tema-01-procesos/`: módulo Maven con las actividades 1 a 10 de la unidad 1.
+- Los paquetes de las actividades 2–10 incluyen código y una guía `README.md` para realizarlas desde cero. La actividad 1 contiene solo la guía de terminal.
+- [Correspondencia con el PDF y ejecución](tema-01-procesos/README.md).
 
 ## Curso actual
 

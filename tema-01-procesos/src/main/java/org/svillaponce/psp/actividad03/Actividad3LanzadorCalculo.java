@@ -1,5 +1,6 @@
 package org.svillaponce.psp.actividad03;
 
+import java.nio.file.Path;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,16 +17,11 @@ public class Actividad3LanzadorCalculo {
         String operacion = args[0];
         String numero = args[1];
 
-        String classpath = "tema-01-procesos/target/classes";
-
+        Path ejecutableJava = Path.of(System.getProperty("java.home"), "bin", "java");
         ProcessBuilder pb = new ProcessBuilder(
-                "java",
-                "-cp",
-                classpath,
-                "org.svillaponce.psp.actividad03.Actividad3Calculadora",
-                operacion,
-                numero
-        );
+                ejecutableJava.toString(), "-cp", System.getProperty("java.class.path"),
+                "org.svillaponce.psp.actividad03.Actividad3Calculadora", operacion, numero);
+        pb.redirectError(ProcessBuilder.Redirect.INHERIT);
 
         Process proceso = pb.start();
 
