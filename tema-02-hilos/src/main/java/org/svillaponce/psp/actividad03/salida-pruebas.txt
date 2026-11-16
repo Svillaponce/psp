@@ -1,0 +1,12 @@
+=== P02 con 8 unidades ===
+P01 | 24 € | ACEPTADA
+P02 | 112 € | RECHAZADA
+P03 | ERROR | java.lang.IllegalArgumentException: Cantidad no positiva: 0
+P04 | 70 € | ACEPTADA
+Aceptadas: 2, rechazadas: 1, errores: 1, total aceptado: 94 €
+=== P02 con 7 unidades ===
+P01 | 24 € | ACEPTADA
+P02 | 98 € | ACEPTADA
+P03 | ERROR | java.lang.IllegalArgumentException: Cantidad no positiva: 0
+P04 | 70 € | ACEPTADA
+Aceptadas: 3, rechazadas: 0, errores: 1, total aceptado: 192 €

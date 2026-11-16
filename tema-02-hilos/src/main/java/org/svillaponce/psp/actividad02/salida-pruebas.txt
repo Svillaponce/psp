@@ -1,0 +1,11 @@
+=== Lote completo ===
+Técnico 1 | M01 | Normal | procesada
+Técnico 2 | M02 | Urgente | procesada
+Técnico 1 | M03 | Normal | procesada
+Técnico 2 | M04 | Urgente | procesada
+Técnico 2 | salida por señal de fin
+Técnico 1 | M05 | Normal | procesada
+Técnico 1 | salida por señal de fin
+=== Cancelación con cola vacía ===
+Técnico 2 | salida por interrupción
+Técnico 1 | salida por interrupción

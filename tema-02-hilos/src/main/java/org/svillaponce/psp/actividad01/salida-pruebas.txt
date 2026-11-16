@@ -1,0 +1,21 @@
+=== Datos de partida ===
+Puerta Norte | E01 | ADMITIDA
+Puerta Sur | E03 | ADMITIDA
+Puerta Sur | E04 | ADMITIDA
+Puerta Sur | E01 | DUPLICADA
+Puerta Sur | E05 | ADMITIDA
+Puerta Norte | E03 | DUPLICADA
+Puerta Norte | E02 | ADMITIDA
+Puerta Norte | X99 | INVALIDA
+Admitidas: 5, duplicadas: 2, inválidas: 1
+=== E02 adicional ===
+Puerta Norte | E01 | ADMITIDA
+Puerta Sur | E03 | ADMITIDA
+Puerta Norte | E03 | DUPLICADA
+Puerta Sur | E04 | ADMITIDA
+Puerta Norte | E02 | ADMITIDA
+Puerta Norte | X99 | INVALIDA
+Puerta Norte | E02 | DUPLICADA
+Puerta Sur | E01 | DUPLICADA
+Puerta Sur | E05 | ADMITIDA
+Admitidas: 5, duplicadas: 3, inválidas: 1

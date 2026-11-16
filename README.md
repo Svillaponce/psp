@@ -25,6 +25,7 @@ Repositorio principal del módulo de Programación de Servicios y Procesos.
 - `tema-01-procesos/`: módulo Maven con las actividades 1 a 10 de la unidad 1.
 - Los paquetes de las actividades 2–10 incluyen código y una guía `README.md` para realizarlas desde cero. La actividad 1 contiene solo la guía de terminal.
 - [Correspondencia con el PDF y ejecución](tema-01-procesos/README.md).
+- `tema-02-hilos/`: tres actividades autónomas y la central de pedidos del problema integrador, con teoría detallada y salidas de prueba en cada paquete. [Guía de la unidad 2](tema-02-hilos/README.md).
 
 ## Curso actual
 

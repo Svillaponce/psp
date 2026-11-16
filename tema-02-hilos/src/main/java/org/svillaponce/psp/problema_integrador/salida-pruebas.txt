@@ -1,0 +1,18 @@
+=== Stock inicial TEC: 6, RAT: 5 ===
+PED-01 | COMPLETADO
+PED-02 | RECHAZADO
+PED-03 | COMPLETADO
+PED-04 | COMPLETADO
+PED-05 | ERROR | java.lang.IllegalArgumentException: Cantidad no positiva: 0
+PED-06 | ERROR | java.lang.IllegalArgumentException: Producto desconocido: XXX
+Completados: 3, rechazados: 1, errores: 2
+Stock final: TEC=2, RAT=0
+=== Stock inicial TEC: 8, RAT: 5 ===
+PED-01 | COMPLETADO
+PED-02 | COMPLETADO
+PED-03 | COMPLETADO
+PED-04 | COMPLETADO
+PED-05 | ERROR | java.lang.IllegalArgumentException: Cantidad no positiva: 0
+PED-06 | ERROR | java.lang.IllegalArgumentException: Producto desconocido: XXX
+Completados: 4, rechazados: 0, errores: 2
+Stock final: TEC=0, RAT=0
