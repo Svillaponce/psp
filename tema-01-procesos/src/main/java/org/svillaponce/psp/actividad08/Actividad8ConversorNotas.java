@@ -11,12 +11,18 @@ public class Actividad8ConversorNotas {
     }
 
     public static void main(String[] args) {
-        if (args.length != 1) { System.err.println("Uso: <notas.csv>"); System.exit(1); }
+        if (args.length != 1) {
+            System.err.println("Uso: <notas.csv>");
+            System.exit(1);
+        }
         System.exit(convertir(Path.of(args[0])));
     }
 
     private static int convertir(Path entrada) {
-        if (!Files.isRegularFile(entrada)) { System.err.println("ERROR|FICHERO|No existe"); return 1; }
+        if (!Files.isRegularFile(entrada)) {
+            System.err.println("ERROR|FICHERO|No existe");
+            return 1;
+        }
         if (!entrada.toString().toLowerCase(Locale.ROOT).endsWith(".csv")) {
             System.err.println("ERROR|EXTENSION|Se requiere .csv"); return 2;
         }
